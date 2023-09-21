@@ -264,33 +264,50 @@ for (let i = 0; i < phones.length; i++) {
 const cartArr = []
 
 function addCart(index) {
-    
-    if (cartArr.includes(phones[index])) {
-        // for(let i=o; i<cartArr.length; i++){
-        // if(cartArr[i]===phones[index]){
+
+if(cartArr.includes(phones[index]) ){
+phones[index].quantity+=1
+
+}
+else{
+
+
+phones[index].quantity=1
+
+                
+                
+                cartArr.push(phones[index])
+                console.log('item added',cartArr)
+}
+
+
+}
+//     if (cartArr.includes(phones[index])) {
+//         // for(let i=o; i<cartArr.length; i++){
+//         // if(cartArr[i]===phones[index]){
             
-         cartArr[index].quantity += 1
-// }
-            // cartArr=''
-            console.log('item already ha');
-        } 
+//          cartArr[index].quantity += 1
+// // }
+//             // cartArr=''
+//             console.log('item already ha');
+//         } 
         
         
-          else{
-            phones[index].quantity=1
-            cartArr.push(phones[index]);
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Item Added to cart successfully',
-                 showConfirmButton: false,
-                timer: 1500
-            }
-            )
-        }
-        console.log('add successfully ', cartArr);
+//           else{
+//             phones[index].quantity=1
+//             cartArr.push(phones[index]);
+//             Swal.fire({
+//                 position: 'top-end',
+//                 icon: 'success',
+//                 title: 'Item Added to cart successfully',
+//                  showConfirmButton: false,
+//                 timer: 1500
+//             }
+//             )
+//         }
+//         console.log('add successfully ', cartArr);
         
-    }    
+//     }    
     
 
 // const cartitems=JSON.stringify(cartArr[i])
