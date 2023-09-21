@@ -117,7 +117,126 @@ const phones = [
         price:'43,999',
      
     },
+    {
+        img :"./assets/techno camon.jpg",
+        brand: 'Techno ',
+        model: 'camon 19',
+        price:'43,999',
+     
+    },
+    {
+        img :"./assets/xiomi.jpg",
+        brand: 'Xiomi',
+        model: 'note10',
+        price:'53,999',
+     
+    },
     
+   
+    {
+        img :"./assets/techno.jpg",
+        brand: 'Tecno',
+        model: 'spark10',
+        price:'45,999',
+     
+    },
+    {
+        img :"./assets/iphone.jpg",
+        brand: 'Iphone',
+        model: '14',
+        price:'500,000',
+     
+    },
+    {
+        img :"./assets/techno camon.jpg",
+        brand: 'Techno ',
+        model: 'camon 19',
+        price:'43,999',
+     
+    },
+    {
+        img :"./assets/xiomi.jpg",
+        brand: 'Xiomi',
+        model: 'note10',
+        price:'53,999',
+     
+    },
+    
+   
+    {
+        img :"./assets/techno.jpg",
+        brand: 'Tecno',
+        model: 'spark10',
+        price:'45,999',
+     
+    },
+    {
+        img :"./assets/iphone.jpg",
+        brand: 'Iphone',
+        model: '14',
+        price:'500,000',
+     
+    },
+    {
+        img :"./assets/techno camon.jpg",
+        brand: 'Techno ',
+        model: 'camon 19',
+        price:'43,999',
+     
+    },
+    {
+        img :"./assets/techno camon.jpg",
+        brand: 'Techno ',
+        model: 'camon 19',
+        price:'43,999',
+     
+    },
+    {
+        img :"./assets/xiomi.jpg",
+        brand: 'Xiomi',
+        model: 'note10',
+        price:'53,999',
+     
+    },
+    
+   
+    {
+        img :"./assets/techno.jpg",
+        brand: 'Tecno',
+        model: 'spark10',
+        price:'45,999',
+     
+    },
+    {
+        img :"./assets/techno camon.jpg",
+        brand: 'Techno ',
+        model: 'camon 19',
+        price:'43,999',
+     
+    },
+    {
+        img :"./assets/techno camon.jpg",
+        brand: 'Techno ',
+        model: 'camon 19',
+        price:'43,999',
+     
+    },
+    {
+        img :"./assets/xiomi.jpg",
+        brand: 'Xiomi',
+        model: 'note10',
+        price:'53,999',
+     
+    },
+    
+   
+    {
+        img :"./assets/techno.jpg",
+        brand: 'Tecno',
+        model: 'spark10',
+        price:'45,999',
+     
+    },
 ]
 const div = document.querySelector('.containers');
 
@@ -132,7 +251,10 @@ for (let i = 0; i < phones.length; i++) {
             <p class="ml-8 text-cyan-50"><span class="font-bold text-lg">price:</span> ${phones[i].price}</p>
 
             <button onclick='addCart(${i})'  class="bg-cyan-200 rounded-md px-2 py-1 text-cyan-200 ml-8 mt-4 hover:bg-[#00a4ec]">Add to Cart</button>
-    </div>
+         
+            </div>
+           
+
     `
 
 }
@@ -144,36 +266,39 @@ const cartArr = []
 function addCart(index) {
     
     if (cartArr.includes(phones[index])) {
-        for(let i=o; i<cartArr.length; i++){
-
-            phones[index].quantity += 1
+        // for(let i=o; i<cartArr.length; i++){
+        // if(cartArr[i]===phones[index]){
+            
+         cartArr[index].quantity += 1
+// }
             // cartArr=''
-       } 
+            console.log('item already ha');
+        } 
         
-        console.log('item already ha');
         
-        
-    }
-
-    else  {
-        phones[index].quantity=1
-        cartArr.push(phones[index]);
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Item Added to cart successfully',
-             showConfirmButton: false,
-            timer: 1500
+          else{
+            phones[index].quantity=1
+            cartArr.push(phones[index]);
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Item Added to cart successfully',
+                 showConfirmButton: false,
+                timer: 1500
+            }
+            )
         }
-        )
-    }
-    console.log('add successfully ', cartArr);
+        console.log('add successfully ', cartArr);
+        
+    }    
     
-}
 
+// const cartitems=JSON.stringify(cartArr[i])
+// localStorage.getItem('cart item', cartitems)
 
-
-
+// function checkcart(){
+//     window.location= "./cart.html"
+// }
 
 
 
