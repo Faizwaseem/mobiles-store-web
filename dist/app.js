@@ -264,10 +264,25 @@ for (let i = 0; i < phones.length; i++) {
 const cartArr = []
 
 function addCart(index) {
-
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Already Item Add hai ',
+         showConfirmButton: false,
+        timer: 1500
+    }
+    )
 if(cartArr.includes(phones[index]) ){
-phones[index].quantity+=1
 
+    for(let i=0; i<cartArr.length; i++){
+if(cartArr[i]===phones[index]){
+
+    cartArr[i].quantity+=1
+    
+
+
+}
+}
 }
 else{
 
@@ -277,46 +292,30 @@ phones[index].quantity=1
                 
                 
                 cartArr.push(phones[index])
-                console.log('item added',cartArr)
-}
+                Swal.fire({
+                                    position: 'top-end',
+                                    icon: 'success',
+                                    title: 'Item Added to cart successfully',
+                                     showConfirmButton: false,
+                                    timer: 1500
+                                }
+                                )
+                                console.log('item added',cartArr)
+                            }
+                        }
 
 
-}
-//     if (cartArr.includes(phones[index])) {
-//         // for(let i=o; i<cartArr.length; i++){
-//         // if(cartArr[i]===phones[index]){
-            
-//          cartArr[index].quantity += 1
-// // }
-//             // cartArr=''
-//             console.log('item already ha');
-//         } 
-        
-        
-//           else{
-//             phones[index].quantity=1
-//             cartArr.push(phones[index]);
-//             Swal.fire({
-//                 position: 'top-end',
-//                 icon: 'success',
-//                 title: 'Item Added to cart successfully',
-//                  showConfirmButton: false,
-//                 timer: 1500
-//             }
-//             )
-//         }
-//         console.log('add successfully ', cartArr);
-        
-//     }    
-    
 
 // const cartitems=JSON.stringify(cartArr[i])
 // localStorage.getItem('cart item', cartitems)
 
-// function checkcart(){
-//     window.location= "./cart.html"
-// }
 
+function checkcart() {
+    const cart = JSON.stringify(cartArr);
+    localStorage.setItem('cartItem' , cart);
+    console.log('cart called');
+    window.location = 'cart.html';
+}
 
 
 
