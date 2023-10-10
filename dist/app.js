@@ -306,19 +306,33 @@ phones[index].quantity=1
 
 
 
-// const cartitems=JSON.stringify(cartArr[i])
-// localStorage.getItem('cart item', cartitems)
+                        
+                        
+                        function checkcart() {
+                            const cart = JSON.stringify(cartArr);
+                            localStorage.setItem('cartItem' , cart);
+                            console.log('cart called');
+                            window.location = 'cart.html';
+                        }
+                        
+                        // const cartitems=JSON.stringify(cartArr[i])
+                        // localStorage.setItem('cart item', cartitems)
 
+const input1=document.querySelector('.input1')
+           
+const inputlog2=document.querySelector('.inputlog2')
+const sublog=document.querySelector('#sublog')
 
-function checkcart() {
-    const cart = JSON.stringify(cartArr);
-    localStorage.setItem('cartItem' , cart);
-    console.log('cart called');
-    window.location = 'cart.html';
-}
+// const logarr=[]
 
+function login(){
 
+console.log(input1.value , inputlog2.value)
 
+ 
+// logarr.push(input1.value , inputlog2.value)
 
-
+                            // localStorage.setItem('usrname',)                      
+                        }
+ 
 

@@ -43,7 +43,7 @@ function decreaseQuantity (index){
     cartArr[index].quantity -= 1
     repeatCart()
     if(cartArr[index].quantity === 0){
-        div.innerHTML = ''
+        // div.innerHTML = ''
         cartArr.splice(index , 1)
         // renderCart()
     }
